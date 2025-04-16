@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  margin-top: 2rem;
+  height: 100vh;
+  width: 100vw;
+}
+.legend {
+  background: white;
+  padding: 10px;
+  line-height: 18px;
+}
+
+.legend i {
+  width: 18px;
+  height: 20px;
+  float: left;
+  margin-right: 8px;
+  margin-top: -4px; /* Moves the icon up a little */
+  opacity: 0.8;
+}
+
+
+/* 3INDEX SEARCH BUTTON */
+.leaflet-control-geosearch input {
+  padding-right: 40px;
+  font-size: 14px;
+  height: 30px;
+}
+
+.leaflet-control-geosearch .results {
+  font-size: 14px;
+}
+
+
+/* ALERT BUTTON DESIGN */
+/* .popup {
+  background: white;
+  padding: 20px 30px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  text-align: center;
+  
+} */
+
+.popup {
+  background: white;
+  padding: 20px 30px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: fixed;                /* Changed from absolute to fixed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 9999;                  /* Added this to place it above Leaflet */
+}
+
+
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.header .logo {
+  max-width: 100px;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+p {
+  font-size: 14px;
+  color: #333;
+  text-align: justify;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+button.start-btn,
+button.about-btn {
+  padding: 10px 20px;
+  border: none;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.start-btn {
+  background-color: #364f6b;
+  color: white;
+}
+
+.about-btn {
+  background-color: #a7bcd4;
+  color: white;
+}
+
+/* FOR SMALLER SCREENS */
+@media screen and (max-width: 768px) {
+  .popup {
+      width: 90%;         /* Make the popup almost full width */
+      padding: 15px 20px; /* Reduce padding for smaller screens */
+      font-size: 14px;    /* Slightly smaller text */
+  }
+
+  .popup .header .logo {
+      max-width: 80px;    /* Shrink the logo for mobile view */
+  }
+
+  .popup h2 {
+      font-size: 18px;    /* Slightly smaller heading */
+  }
+
+  .popup p {
+      font-size: 13px;    /* Make paragraph text smaller for better fit */
+  }
+
+  .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+
+  .button-group button {
+      width: 100%;
+      padding: 12px 0;
+      font-size: 14px;
+  }
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Specifies the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sets the viewport to make the site mobile-friendly -->
+    <title>Leaflet DEM Map with GeoSearch</title>
+    <!-- Sets the page title -->
+
+    <!-- Leaflet CSS for styling the map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- GeoSearch CSS for styling the search box -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-geosearch/dist/geosearch.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Div container for the map -->
+    <div id="map"></div>
+
+    <!-- POP UP BOX -->
+    <div class="popup" id="popup">
+      <button class="btn-close close-btn">&times;</button>
+      <!-- Close button 1 -->
+
+      <h2>
+        Lagos Underwater: Sea Level Rise Impact Zones and Future Scenarios
+      </h2>
+      <p>
+        The Intergovernmental Panel on Climate Change (IPCC) is the United
+        Nations body for assessing the science related to climate change. The
+        IPCC was created to provide policymakers with regular scientific
+        assessments on climate change, its implications and potential future
+        risks. As part of this effort, the IPCC surveys and distills the
+        scientific literature and provides consensus projections on future sea
+        levels across the globe under a range of possible future scenarios. The
+        NASA Sea Level Projection Tool allows users to visualize and download
+        the sea level projection data from the IPCC 6th Assessment Report (AR6).
+        The goal of this tool is to provide easy and improved access and
+        visualization to the consensus projections found in the report.
+      </p>
+      <div class="button-group">
+        <button class="start-btn close-btn">START</button>
+        <button class="about-btn">ABOUT THE TOOL</button>
+        <!-- <button class="close-btn">Close</button> -->
+        <!-- Close button 2 -->
+      </div>
+    </div>
+
+    <!-- Dropdown toggle button for menu options -->
+    <!-- <button id="toggler">Menu</button> -->
+    <!-- Dropdown menu hidden by default -->
+    <!-- <div id="dropdown" style="display: none">
+      <p>Login | Signup | Help</p>
+    </div> -->
+
+    <!-- Leaflet JavaScript library 
+     -->
+    <script src="alert.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- GeoRaster dependencies for handling raster data -->
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+
+    <!-- GeoSearch JavaScript library for search box functionality -->
+    <script src="https://unpkg.com/leaflet-geosearch/dist/bundle.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
